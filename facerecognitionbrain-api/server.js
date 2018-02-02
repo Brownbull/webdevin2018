@@ -11,6 +11,9 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+// ENV vars
+const PORT = process.env.PORT || 3000;
+
 // database
 const db = knex({
     client: 'pg',
@@ -37,6 +40,6 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)}) // eof app.pu
 app.post('/imageurl', (req, res) => {image.handleAPICall(req, res)}) // eof app.put('/image'
 
 // LISTEN
-app.listen(3000, () => {
-    console.log('Server Started...');
+app.listen(PORT, () => {
+    console.log(`Server Started, listen on PORT ${PORT}`);
 })
