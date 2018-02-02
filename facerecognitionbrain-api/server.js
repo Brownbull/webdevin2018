@@ -37,6 +37,6 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)}) // eof app.pu
 app.post('/imageurl', (req, res) => {image.handleAPICall(req, res)}) // eof app.put('/image'
 
 // LISTEN
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Server Started...');
 })
