@@ -1,6 +1,6 @@
 const handleProfile = (req, res, db) => {
     const { id } = req.params;
-    db.select('*').from('local.users').where({ id: id })
+    db.select('*').from('users').where({ id: id })
         .then(user => {
             if (user.length) {
                 res.json(user[0])
