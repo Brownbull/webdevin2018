@@ -27,6 +27,7 @@ const particlesOptions = {
     // }
   }
 }
+
 const initialState = {
   input: '',
   imageUrl: '',
@@ -41,6 +42,7 @@ const initialState = {
     joined: ''
   }
 }
+
 class App extends Component {
   constructor() {
     super();
@@ -58,7 +60,7 @@ class App extends Component {
         joined: ''
       }
     }
-  }
+  } // eof constructor
 
   // componentDidMount() {
   //   fetch('http://localhost:3000')
